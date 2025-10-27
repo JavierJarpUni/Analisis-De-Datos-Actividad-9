@@ -27,17 +27,51 @@ st.markdown("""
         font-weight: bold;
     }
     .metric-card {
-        background-color: #f0f2f6;
+        background-color: var(--background-color-secondary, #f0f2f6);
         padding: 1rem;
         border-radius: 0.5rem;
         border-left: 4px solid #1f77b4;
+        color: var(--text-color, #262730);
     }
     .recommendation-card {
-        background-color: #ffffff;
+        background-color: var(--background-color-secondary, #ffffff);
         padding: 1rem;
         border-radius: 0.5rem;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         margin-bottom: 1rem;
+        border: 1px solid var(--border-color, #e0e0e0);
+        color: var(--text-color, #262730);
+    }
+    
+    /* Dark mode compatibility */
+    @media (prefers-color-scheme: dark) {
+        .metric-card {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            border-left-color: #4a9eff;
+        }
+        .recommendation-card {
+            background-color: #262730;
+            color: #ffffff;
+            border-color: #404040;
+            box-shadow: 0 2px 4px rgba(255,255,255,0.05);
+        }
+    }
+    
+    /* Streamlit dark theme detection */
+    [data-testid="stAppViewContainer"][data-theme="dark"] .metric-card,
+    .stApp[data-theme="dark"] .metric-card {
+        background-color: #1e1e1e !important;
+        color: #ffffff !important;
+        border-left-color: #4a9eff !important;
+    }
+    
+    [data-testid="stAppViewContainer"][data-theme="dark"] .recommendation-card,
+    .stApp[data-theme="dark"] .recommendation-card {
+        background-color: #262730 !important;
+        color: #ffffff !important;
+        border-color: #404040 !important;
+        box-shadow: 0 2px 4px rgba(255,255,255,0.05) !important;
     }
 </style>
 """, unsafe_allow_html=True)
