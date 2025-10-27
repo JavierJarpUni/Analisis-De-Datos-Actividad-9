@@ -1,0 +1,14 @@
+ESTADÍSTICAS GENERALES DEL DATASET
+======================================================================
+
+Total de registros: 3,900
+Clientes únicos: 3,900
+Productos únicos: 25
+Categorías: 4
+
+Gasto promedio: $59.76
+Gasto total: $233,081.00
+Calificación promedio: 3.75/5
+
+Categoría más popular: Clothing
+Producto más vendido: Blouse
